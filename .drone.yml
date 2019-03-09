@@ -24,6 +24,7 @@ steps:
       from_secret: docker_password
     repo: hotio/jackett
     auto_tag: true
+    cache_from: "hotio/jackett"
 
 - name: microbadger
   image: plugins/webhook
