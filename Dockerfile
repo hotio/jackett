@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 ENV APP="Jackett"
 EXPOSE 9117
-HEALTHCHECK --interval=60s CMD curl -fsSL http://localhost:9117 || exit 1
+HEALTHCHECK --interval=60s CMD curl -fsSL -c /tmp/cookie -b /tmp/cookie http://localhost:9117 || exit 1
 
 # install app
 # https://github.com/Jackett/Jackett/releases
