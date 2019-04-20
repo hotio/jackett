@@ -1,5 +1,9 @@
 # [Jackett](https://github.com/Jackett/Jackett)
 
+[![badge](https://images.microbadger.com/badges/image/hotio/jackett.svg)](https://microbadger.com/images/hotio/jackett "Get your own image badge on microbadger.com")
+[![badge](https://images.microbadger.com/badges/version/hotio/jackett.svg)](https://microbadger.com/images/hotio/jackett "Get your own version badge on microbadger.com")
+[![badge](https://images.microbadger.com/badges/commit/hotio/jackett.svg)](https://microbadger.com/images/hotio/jackett "Get your own commit badge on microbadger.com")
+
 ## Donations
 
 NANO: `xrb_1bxqm6nsm55s64rgf8f5k9m795hda535to6y15ik496goatakpupjfqzokfc`  
