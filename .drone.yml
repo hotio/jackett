@@ -67,6 +67,8 @@ steps:
       from_secret: docker_password
     repo: hotio/jackett
     cache_from: hotio/jackett:develop
+    build_args:
+      - ARCH_JACKETT=LinuxARM64
     tags:
       - develop-linux-arm64
 
@@ -96,6 +98,8 @@ steps:
       from_secret: docker_password
     repo: hotio/jackett
     cache_from: hotio/jackett:develop
+    build_args:
+      - ARCH_JACKETT=LinuxARM32
     tags:
       - develop-linux-arm
 
