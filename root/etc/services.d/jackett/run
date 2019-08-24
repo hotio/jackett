@@ -3,4 +3,4 @@
 
 umask "${UMASK}"
 
-exec s6-setuidgid hotio "${APP_DIR}/jackett" --NoRestart --ListenPublic --NoUpdates --DataFolder="${CONFIG_DIR}/app"
+exec s6-setuidgid hotio "${APP_DIR}/jackett" --NoRestart --ListenPublic --NoUpdates --DataFolder="${CONFIG_DIR}/app" > /dev/null 2>&1
