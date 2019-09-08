@@ -40,9 +40,8 @@ steps:
     repo: hotio/jackett
     cache_from: hotio/jackett
     build_args:
-      - GIT_COMMIT=${DRONE_COMMIT_SHA}
-      - GIT_TAG=${DRONE_TAG:-develop}
-      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+      - COMMIT=${DRONE_COMMIT_SHA}
+      - TAG=${DRONE_TAG:-develop}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxAMDx64
     tags:
       - ${DRONE_TAG:-develop}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
@@ -75,9 +74,8 @@ steps:
     repo: hotio/jackett
     cache_from: hotio/jackett
     build_args:
-      - GIT_COMMIT=${DRONE_COMMIT_SHA}
-      - GIT_TAG=${DRONE_TAG:-develop}
-      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+      - COMMIT=${DRONE_COMMIT_SHA}
+      - TAG=${DRONE_TAG:-develop}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxARM64
     tags:
       - ${DRONE_TAG:-develop}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
@@ -110,9 +108,8 @@ steps:
     repo: hotio/jackett
     cache_from: hotio/jackett
     build_args:
-      - GIT_COMMIT=${DRONE_COMMIT_SHA}
-      - GIT_TAG=${DRONE_TAG:-develop}
-      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+      - COMMIT=${DRONE_COMMIT_SHA}
+      - TAG=${DRONE_TAG:-develop}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxARM32
     tags:
       - ${DRONE_TAG:-develop}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
