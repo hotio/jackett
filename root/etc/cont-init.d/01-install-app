@@ -8,10 +8,10 @@ if [[ "${VERSION}" != "image" ]]; then
     else
         case "${VERSION}" in
             stable)
-                url=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases/latest" | jq -r .assets[].browser_download_url | grep -o ".*Jackett.Binaries.${ARCH}.tar.gz")
+                url=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases/latest" | jq -r .assets[].browser_download_url | grep -o ".*Jackett.Binaries.${ARCH_JACKETT}.tar.gz")
                 ;;
             unstable)
-                url=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases" | jq -r .[0].assets[].browser_download_url | grep -o ".*Jackett.Binaries.${ARCH}.tar.gz")
+                url=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases" | jq -r .[0].assets[].browser_download_url | grep -o ".*Jackett.Binaries.${ARCH_JACKETT}.tar.gz")
                 ;;
             *)
                 url="${VERSION}"

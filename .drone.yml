@@ -38,8 +38,13 @@ steps:
       from_secret: docker_password
     repo: hotio/jackett
     cache_from: hotio/jackett:develop
+    build_args:
+      - GIT_COMMIT=${DRONE_COMMIT_SHA}
+      - GIT_TAG=${DRONE_TAG}
+      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+      - ARCH_JACKETT=LinuxAMDx64
     tags:
-      - develop-linux-amd64
+      - develop-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
 
 depends_on:
   - checks
@@ -68,9 +73,12 @@ steps:
     repo: hotio/jackett
     cache_from: hotio/jackett:develop
     build_args:
+      - GIT_COMMIT=${DRONE_COMMIT_SHA}
+      - GIT_TAG=${DRONE_TAG}
+      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxARM64
     tags:
-      - develop-linux-arm64
+      - develop-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
 
 depends_on:
   - checks
@@ -99,9 +107,12 @@ steps:
     repo: hotio/jackett
     cache_from: hotio/jackett:develop
     build_args:
+      - GIT_COMMIT=${DRONE_COMMIT_SHA}
+      - GIT_TAG=${DRONE_TAG}
+      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxARM32
     tags:
-      - develop-linux-arm
+      - develop-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
 
 depends_on:
   - checks
@@ -129,8 +140,13 @@ steps:
       from_secret: docker_password
     repo: hotio/jackett
     cache_from: hotio/jackett
+    build_args:
+      - GIT_COMMIT=${DRONE_COMMIT_SHA}
+      - GIT_TAG=${DRONE_TAG}
+      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+      - ARCH_JACKETT=LinuxAMDx64
     tags:
-      - ${DRONE_TAG}-linux-amd64
+      - ${DRONE_TAG}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
 
 depends_on:
   - checks
@@ -159,9 +175,12 @@ steps:
     repo: hotio/jackett
     cache_from: hotio/jackett
     build_args:
+      - GIT_COMMIT=${DRONE_COMMIT_SHA}
+      - GIT_TAG=${DRONE_TAG}
+      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxARM64
     tags:
-      - ${DRONE_TAG}-linux-arm64
+      - ${DRONE_TAG}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
 
 depends_on:
   - checks
@@ -190,9 +209,12 @@ steps:
     repo: hotio/jackett
     cache_from: hotio/jackett
     build_args:
+      - GIT_COMMIT=${DRONE_COMMIT_SHA}
+      - GIT_TAG=${DRONE_TAG}
+      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxARM32
     tags:
-      - ${DRONE_TAG}-linux-arm
+      - ${DRONE_TAG}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
 
 depends_on:
   - checks

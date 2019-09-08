@@ -1,10 +1,14 @@
 FROM hotio/dotnetcore
 
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG ARCH_JACKETT="LinuxAMDx64"
+ARG ARCH_JACKETT
+ARG GIT_COMMIT
+ARG GIT_TAG
+ARG ARCH
 
+ENV GIT_COMMIT="${GIT_COMMIT}" GIT_TAG="${GIT_TAG}" ARCH="${ARCH}"
 ENV APP="Jackett"
-ENV ARCH="${ARCH_JACKETT}"
+ENV ARCH_JACKETT="${ARCH_JACKETT}"
 EXPOSE 9117
 HEALTHCHECK --interval=60s CMD curl -fsSL -b /dev/shm/cookie http://localhost:9117 || exit 1
 
