@@ -17,109 +17,7 @@ steps:
 
 ---
 kind: pipeline
-name: develop-amd64
-
-platform:
-  os: linux
-  arch: amd64
-
-trigger:
-  event:
-    - push
-
-steps:
-- name: build
-  image: plugins/docker
-  pull: always
-  settings:
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    repo: hotio/jackett
-    cache_from: hotio/jackett:develop
-    build_args:
-      - GIT_COMMIT=${DRONE_COMMIT_SHA}
-      - GIT_TAG=${DRONE_TAG}
-      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
-      - ARCH_JACKETT=LinuxAMDx64
-    tags:
-      - develop-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
-
-depends_on:
-  - checks
-
----
-kind: pipeline
-name: develop-arm64
-
-platform:
-  os: linux
-  arch: arm64
-
-trigger:
-  event:
-    - push
-
-steps:
-- name: build
-  image: plugins/docker
-  pull: always
-  settings:
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    repo: hotio/jackett
-    cache_from: hotio/jackett:develop
-    build_args:
-      - GIT_COMMIT=${DRONE_COMMIT_SHA}
-      - GIT_TAG=${DRONE_TAG}
-      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
-      - ARCH_JACKETT=LinuxARM64
-    tags:
-      - develop-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
-
-depends_on:
-  - checks
-
----
-kind: pipeline
-name: develop-arm
-
-platform:
-  os: linux
-  arch: arm
-
-trigger:
-  event:
-    - push
-
-steps:
-- name: build
-  image: plugins/docker
-  pull: always
-  settings:
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    repo: hotio/jackett
-    cache_from: hotio/jackett:develop
-    build_args:
-      - GIT_COMMIT=${DRONE_COMMIT_SHA}
-      - GIT_TAG=${DRONE_TAG}
-      - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
-      - ARCH_JACKETT=LinuxARM32
-    tags:
-      - develop-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
-
-depends_on:
-  - checks
-
----
-kind: pipeline
-name: release-amd64
+name: linux-amd64
 
 platform:
   os: linux
@@ -128,6 +26,7 @@ platform:
 trigger:
   event:
     - tag
+    - push
 
 steps:
 - name: build
@@ -142,18 +41,18 @@ steps:
     cache_from: hotio/jackett
     build_args:
       - GIT_COMMIT=${DRONE_COMMIT_SHA}
-      - GIT_TAG=${DRONE_TAG}
+      - GIT_TAG=${DRONE_TAG:-develop}
       - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxAMDx64
     tags:
-      - ${DRONE_TAG}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+      - ${DRONE_TAG:-develop}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
 
 depends_on:
   - checks
 
 ---
 kind: pipeline
-name: release-arm64
+name: linux-arm64
 
 platform:
   os: linux
@@ -162,6 +61,7 @@ platform:
 trigger:
   event:
     - tag
+    - push
 
 steps:
 - name: build
@@ -176,18 +76,18 @@ steps:
     cache_from: hotio/jackett
     build_args:
       - GIT_COMMIT=${DRONE_COMMIT_SHA}
-      - GIT_TAG=${DRONE_TAG}
+      - GIT_TAG=${DRONE_TAG:-develop}
       - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxARM64
     tags:
-      - ${DRONE_TAG}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+      - ${DRONE_TAG:-develop}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
 
 depends_on:
   - checks
 
 ---
 kind: pipeline
-name: release-arm
+name: linux-arm
 
 platform:
   os: linux
@@ -196,6 +96,7 @@ platform:
 trigger:
   event:
     - tag
+    - push
 
 steps:
 - name: build
@@ -210,11 +111,11 @@ steps:
     cache_from: hotio/jackett
     build_args:
       - GIT_COMMIT=${DRONE_COMMIT_SHA}
-      - GIT_TAG=${DRONE_TAG}
+      - GIT_TAG=${DRONE_TAG:-develop}
       - ARCH=${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
       - ARCH_JACKETT=LinuxARM32
     tags:
-      - ${DRONE_TAG}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+      - ${DRONE_TAG:-develop}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
 
 depends_on:
   - checks
@@ -241,9 +142,6 @@ steps:
     spec: manifest.tmpl
 
 depends_on:
-  - develop-amd64
-  - develop-arm64
-  - develop-arm
-  - release-amd64
-  - release-arm64
-  - release-arm
+  - linux-amd64
+  - linux-arm64
+  - linux-arm
