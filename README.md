@@ -1,8 +1,7 @@
-# [Jackett](https://github.com/Jackett/Jackett)
+# [docker-jackett](https://github.com/hotio/docker-jackett)
 
-[![badge](https://images.microbadger.com/badges/image/hotio/jackett.svg)](https://microbadger.com/images/hotio/jackett "Get your own image badge on microbadger.com")
-[![badge](https://images.microbadger.com/badges/version/hotio/jackett.svg)](https://microbadger.com/images/hotio/jackett "Get your own version badge on microbadger.com")
-[![badge](https://images.microbadger.com/badges/commit/hotio/jackett.svg)](https://microbadger.com/images/hotio/jackett "Get your own commit badge on microbadger.com")
+![Docker Pulls](https://img.shields.io/docker/pulls/hotio/jackett?style=flat-square)
+![Drone (cloud)](https://img.shields.io/drone/build/hotio/docker-jackett?style=flat-square)
 
 ## Donations
 
