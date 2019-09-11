@@ -14,8 +14,5 @@ RUN curl -fsSL "https://github.com/Jackett/Jackett/releases/download/v0.11.687/J
 
 COPY root/ /
 
-ARG COMMIT
 ARG TAG
-ARG APP
-
-ENV COMMIT="${COMMIT}" TAG="${TAG}" APP="${APP}"
+ENV TAG="${TAG}"
