@@ -8,21 +8,21 @@ if [[ "${VERSION}" != "image" ]]; then
     else
         case "${ARCH}" in
             linux-amd64)
-                archtecture="LinuxAMDx64"
+                architecture="LinuxAMDx64"
                 ;;
             linux-arm64)
-                archtecture="LinuxARM64"
+                architecture="LinuxARM64"
                 ;;
             linux-arm)
-                archtecture="LinuxARM32"
+                architecture="LinuxARM32"
                 ;;
         esac
         case "${VERSION}" in
             stable)
-                url=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases/latest" | jq -r .assets[].browser_download_url | grep -o ".*Jackett.Binaries.${archtecture}.tar.gz")
+                url=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases/latest" | jq -r .assets[].browser_download_url | grep -o ".*Jackett.Binaries.${architecture}.tar.gz")
                 ;;
             unstable)
-                url=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases" | jq -r .[0].assets[].browser_download_url | grep -o ".*Jackett.Binaries.${archtecture}.tar.gz")
+                url=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases" | jq -r .[0].assets[].browser_download_url | grep -o ".*Jackett.Binaries.${architecture}.tar.gz")
                 ;;
             *)
                 url="${VERSION}"
