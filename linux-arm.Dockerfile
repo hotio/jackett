@@ -1,4 +1,5 @@
-FROM hotio/dotnetcore
+ARG BRANCH
+FROM hotio/dotnetcore:${BRANCH}
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
