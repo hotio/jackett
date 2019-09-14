@@ -27,8 +27,8 @@ Possible values for `VERSION`:
 VERSION=image
 VERSION=stable
 VERSION=unstable
-VERSION=https://github.com/Jackett/Jackett/releases/download/v0.8.1162/Jackett.Binaries.Mono.tar.gz
-VERSION=file:///config/Jackett.Binaries.Mono.tar.gz
+VERSION=https://github.com/Jackett/Jackett/releases/download/v0.11.689/Jackett.Binaries.LinuxAMDx64.tar.gz
+VERSION=file:///config/Jackett.Binaries.LinuxAMDx64.tar.gz
 ```
 
 ## Using a rclone mount
