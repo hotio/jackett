@@ -8,7 +8,9 @@ HEALTHCHECK --interval=60s CMD curl -fsSL -b /dev/shm/cookie http://localhost:91
 
 COPY root/ /
 
+# https://github.com/Jackett/Jackett/releases
+ENV JACKETT_VERSION=0.11.689
+
 # install app
-RUN version=$(sed -n '1p' /versions/jackett) && \
-    curl -fsSL "https://github.com/Jackett/Jackett/releases/download/v${version}/Jackett.Binaries.LinuxARM64.tar.gz" | tar xzf - -C "${APP_DIR}" --strip-components=1 && \
+RUN curl -fsSL "https://github.com/Jackett/Jackett/releases/download/v${JACKETT_VERSION}/Jackett.Binaries.LinuxARM64.tar.gz" | tar xzf - -C "${APP_DIR}" --strip-components=1 && \
     chmod -R u=rwX,go=rX "${APP_DIR}"
