@@ -4,7 +4,6 @@ FROM hotio/dotnetcore:${BRANCH}
 ARG DEBIAN_FRONTEND="noninteractive"
 
 EXPOSE 9117
-HEALTHCHECK --interval=60s CMD curl -fsSL -b /dev/shm/cookie http://localhost:9117 || exit 1
 
 COPY root/ /
 
