@@ -8,7 +8,7 @@ EXPOSE 9117
 COPY root/ /
 
 # https://github.com/Jackett/Jackett/releases
-ENV JACKETT_VERSION=0.11.709
+ENV JACKETT_VERSION=0.11.723
 
 # install app
 RUN curl -fsSL "https://github.com/Jackett/Jackett/releases/download/v${JACKETT_VERSION}/Jackett.Binaries.LinuxARM64.tar.gz" | tar xzf - -C "${APP_DIR}" --strip-components=1 && \
