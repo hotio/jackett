@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###################
-version=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases/latest" | jq -r .tag_name | sed s/v//g)
+version=$(curl -fsSL "https://api.github.com/repos/jackett/jackett/releases" | jq -r .[0].tag_name | sed s/v//g)
 app=JACKETT
 ###################
 
