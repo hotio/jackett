@@ -65,7 +65,7 @@ steps:
   pull: always
   commands:
     - sleep 60
-    - curl -fsSL service:9117
+    - curl -fsSL -b /dev/shm/cookie service:9117
 
 services:
 - name: service
@@ -126,7 +126,7 @@ steps:
   pull: always
   commands:
     - sleep 60
-    - curl -fsSL service:9117
+    - curl -fsSL -b /dev/shm/cookie service:9117
 
 services:
 - name: service
@@ -187,7 +187,7 @@ steps:
   pull: always
   commands:
     - sleep 60
-    - curl -fsSL service:9117
+    - curl -fsSL -b /dev/shm/cookie service:9117
 
 services:
 - name: service
