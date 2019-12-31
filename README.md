@@ -9,7 +9,7 @@
 Just the basics to get the container running:
 
 ```shell
-docker run --rm --name jackett -p 9117:9117 -v /<host_folder>:/config hotio/jackett
+docker run --rm --name jackett -p 9117:9117 -v /<host_folder_config>:/config hotio/jackett
 ```
 
 The environment variables below are all optional, the values you see are the defaults.
