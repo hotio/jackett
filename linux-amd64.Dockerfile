@@ -1,11 +1,11 @@
-FROM hotio/dotnetcore@sha256:cf67da1687fc378c496e2d896a932691e2838b27ce6a9764ed57d862ad79c3e4
+FROM hotio/dotnetcore@sha256:0f3e7b1dbd27a9f258d446abcc11060e38710bf05931a070a86d4faec45c22aa
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
 EXPOSE 9117
 
 # https://github.com/Jackett/Jackett/releases
-ARG JACKETT_VERSION=0.12.1638
+ARG JACKETT_VERSION=0.14.257
 
 # install app
 RUN curl -fsSL "https://github.com/Jackett/Jackett/releases/download/v${JACKETT_VERSION}/Jackett.Binaries.LinuxAMDx64.tar.gz" | tar xzf - -C "${APP_DIR}" --strip-components=1 && \
