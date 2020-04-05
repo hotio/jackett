@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND="noninteractive"
 EXPOSE 9117
 
 # https://github.com/Jackett/Jackett/releases
-ARG JACKETT_VERSION=0.14.418
+ARG JACKETT_VERSION=0.14.433
 
 # install app
 RUN curl -fsSL "https://github.com/Jackett/Jackett/releases/download/v${JACKETT_VERSION}/Jackett.Binaries.LinuxARM32.tar.gz" | tar xzf - -C "${APP_DIR}" --strip-components=1 && \
