@@ -60,17 +60,12 @@ jobs:
         run: |
           docker run --rm --entrypoint="" ${GITHUB_REPOSITORY//docker-/}:${GITHUB_REF//refs\/heads\//}-${GITHUB_SHA:0:7}-${GITHUB_RUN_NUMBER}-${{ matrix.architecture }} apt list --installed
 
-      - name: Start app
+      - name: Check if app works
         run: |
+          app_url="http://localhost:9117"
           docker run --rm --network host -d --name service -e DEBUG="yes" ${GITHUB_REPOSITORY//docker-/}:${GITHUB_REF//refs\/heads\//}-${GITHUB_SHA:0:7}-${GITHUB_RUN_NUMBER}-${{ matrix.architecture }}
-
-      - name: Wait for response
-        uses: nev7n/wait_for_response@v1
-        with:
-          url: 'http://localhost:9117'
-          responseCode: 200
-          timeout: 60000
-          interval: 1000
+          currenttime=$(date +%s); maxtime=$((currenttime+60)); while (! curl -fsSL -b /dev/shm/cookie "${app_url}" > /dev/null) && [[ "$currenttime" -lt "$maxtime" ]]; do sleep 1; currenttime=$(date +%s); done
+          curl -fsSL -b /dev/shm/cookie "${app_url}" > /dev/null
 
       - name: Show docker logs
         if: always()
