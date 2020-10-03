@@ -1,6 +1,6 @@
 # jackett
 
-![logo](https://hotio.dev/img/jackett.png)
+[<img src="https://hotio.dev/img/jackett.png" alt="logo" height="130" width="130">](https://github.com/Jackett/Jackett)
 
 ![Base](https://img.shields.io/badge/base-ubuntu-orange)
 [![GitHub](https://img.shields.io/badge/source-github-lightgrey)](https://github.com/hotio/docker-jackett)
