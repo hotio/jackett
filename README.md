@@ -1,5 +1,3 @@
-# jackett
-
 [<img src="https://hotio.dev/img/jackett.png" alt="logo" height="130" width="130">](https://github.com/Jackett/Jackett)
 
 ![Base](https://img.shields.io/badge/base-ubuntu-orange)
