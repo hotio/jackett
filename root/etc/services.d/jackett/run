@@ -3,5 +3,4 @@
 
 umask "${UMASK}"
 
-# shellcheck disable=SC2086
-exec s6-setuidgid hotio "${APP_DIR}/jackett" --NoRestart --ListenPublic --NoUpdates --DataFolder="${CONFIG_DIR}" ${ARGS}
+exec s6-setuidgid hotio "${APP_DIR}/jackett" --NoRestart --ListenPublic --NoUpdates --DataFolder="${CONFIG_DIR}"
