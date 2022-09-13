@@ -1,4 +1,6 @@
 {
   "version": "0.20.1887",
-  "changelog": "https://github.com/jackett/jackett/compare/v0.20.1885...v0.20.1887"
+  "changelog": "https://github.com/jackett/jackett/compare/v0.20.1885...v0.20.1887",
+  "upstream_image": "cr.hotio.dev/hotio/base",
+  "upstream_tag": "alpine"
 }
