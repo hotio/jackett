@@ -5,7 +5,7 @@ FROM ${UPSTREAM_IMAGE}@${UPSTREAM_DIGEST_ARM64}
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
-EXPOSE 9117
+VOLUME ["${CONFIG_DIR}"]
 
 # install packages
 RUN apt update && \
