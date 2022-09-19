@@ -1,6 +1,6 @@
 {
-  "version": "0.20.1910",
-  "changelog": "https://github.com/jackett/jackett/compare/v0.20.1908...v0.20.1910",
+  "version": "0.20.1913",
+  "changelog": "https://github.com/jackett/jackett/compare/v0.20.1910...v0.20.1913",
   "upstream_image": "cr.hotio.dev/hotio/base",
   "upstream_tag": "focal",
   "upstream_digest_amd64": "sha256:ca3ed2296a986252dc75d489e54be63a6d8f46339c8e90e6a1a7f34868ed66d7",
