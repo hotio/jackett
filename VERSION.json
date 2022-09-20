@@ -1,4 +1,5 @@
 {
+  "description": "Releases",
   "version": "0.20.1915",
   "changelog": "https://github.com/jackett/jackett/compare/v0.20.1913...v0.20.1915",
   "upstream_image": "cr.hotio.dev/hotio/base",
