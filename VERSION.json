@@ -1,7 +1,7 @@
 {
   "description": "Pre-releases",
-  "version": "0.20.4078",
-  "changelog": "https://github.com/jackett/jackett/compare/v0.20.4071...v0.20.4078",
+  "version": "0.20.4083",
+  "changelog": "https://github.com/jackett/jackett/compare/v0.20.4078...v0.20.4083",
   "upstream_image": "cr.hotio.dev/hotio/base",
   "upstream_tag": "focal",
   "upstream_digest_amd64": "sha256:7952231967b198d718495f5d146f9c91af7555dd7b47252792020b1125778ccf",
