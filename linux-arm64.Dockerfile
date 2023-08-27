@@ -22,4 +22,3 @@ RUN curl -fsSL "https://github.com/Jackett/Jackett/releases/download/v${VERSION}
     chmod -R u=rwX,go=rX "${APP_DIR}"
 
 COPY root/ /
-RUN chmod -R +x /etc/cont-init.d/ /etc/services.d/
