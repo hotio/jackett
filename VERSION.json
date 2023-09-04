@@ -1,7 +1,7 @@
 {
   "description": "Pre-releases",
-  "version": "0.21.733",
-  "changelog": "https://github.com/jackett/jackett/compare/v0.21.724...v0.21.733",
+  "version": "0.21.741",
+  "changelog": "https://github.com/jackett/jackett/compare/v0.21.733...v0.21.741",
   "upstream_image": "ghcr.io/hotio/base",
   "upstream_tag": "alpine",
   "upstream_digest_amd64": "sha256:e3ba95dab43ff3129f22427a96166e5cd25b099a1d3e377d3fb2976e41c2cec9",
