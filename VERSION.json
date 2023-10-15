@@ -1,8 +1,8 @@
 {
   "latest": true,
   "description": "Releases",
-  "version": "0.21.1017",
-  "changelog": "https://github.com/jackett/jackett/compare/v0.21.1013...v0.21.1017",
+  "version": "0.21.1018",
+  "changelog": "https://github.com/jackett/jackett/compare/v0.21.1017...v0.21.1018",
   "upstream_image": "ghcr.io/hotio/base",
   "upstream_tag": "alpine",
   "upstream_digest_amd64": "sha256:7eb56465879803137e0557977e6d983abb8131a77a6b57efdb24985166aee037",
