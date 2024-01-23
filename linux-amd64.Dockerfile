@@ -5,8 +5,6 @@ FROM ${UPSTREAM_IMAGE}@${UPSTREAM_DIGEST_AMD64}
 EXPOSE 9117
 ARG DEBIAN_FRONTEND="noninteractive"
 
-VOLUME ["${CONFIG_DIR}"]
-
 RUN apk add --no-cache icu-libs icu-data-full
 
 ARG VERSION
