@@ -1,8 +1,8 @@
 {
   "latest": true,
   "description": "Releases",
-  "version": "0.21.1621",
-  "changelog": "https://github.com/jackett/jackett/compare/v0.21.1613...v0.21.1621",
+  "version": "0.21.1635",
+  "changelog": "https://github.com/jackett/jackett/compare/v0.21.1621...v0.21.1635",
   "upstream_image": "ghcr.io/hotio/base",
   "upstream_tag": "alpinevpn",
   "upstream_digest_amd64": "sha256:a72ad24381bf3b2af53bdef6c7c780aeb59c0c1d6186a96a0df1cde75d59962d",
