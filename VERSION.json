@@ -1,7 +1,7 @@
 {
   "description": "Pre-releases",
-  "version": "0.21.1693",
-  "changelog": "https://github.com/jackett/jackett/compare/v0.21.1682...v0.21.1693",
+  "version": "0.21.1700",
+  "changelog": "https://github.com/jackett/jackett/compare/v0.21.1693...v0.21.1700",
   "upstream_image": "ghcr.io/hotio/base",
   "upstream_tag": "alpinevpn",
   "upstream_digest_amd64": "sha256:cfee33d5f5c24786c2f8913e848513c62b9c0fb06cbb86fb97118718938e7ceb",
