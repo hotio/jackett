@@ -14,13 +14,13 @@
   "testing": {
     "description": "Pre-releases",
     "hide": false,
-    "last_updated": "2024-10-13T06:15:28.000Z",
-    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/11311987605",
+    "last_updated": "2024-10-14T06:16:53.000Z",
+    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/11321992301",
     "latest": false,
     "tags": [
       "testing",
-      "testing-0.22.779",
-      "testing-36651ec"
+      "testing-0.22.789",
+      "testing-c317fb4"
     ]
   }
 }
