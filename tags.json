@@ -14,13 +14,13 @@
   "testing": {
     "description": "Pre-releases",
     "hide": false,
-    "last_updated": "2024-11-30T06:16:21.000Z",
-    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/12094155629",
+    "last_updated": "2024-12-01T06:16:53.000Z",
+    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/12102936846",
     "latest": false,
     "tags": [
       "testing",
-      "testing-0.22.1021",
-      "testing-ceeba70"
+      "testing-0.22.1023",
+      "testing-ac2403b"
     ]
   }
 }
