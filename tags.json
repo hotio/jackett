@@ -2,13 +2,13 @@
   "release": {
     "description": "Releases",
     "hide": false,
-    "last_updated": "2025-02-22T06:30:54.000Z",
-    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/13470312594",
+    "last_updated": "2025-02-23T12:42:22.000Z",
+    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/13480366342",
     "latest": true,
     "tags": [
       "release",
-      "release-0.22.1450",
-      "release-740cdfb"
+      "release-0.22.1452",
+      "release-afb0498"
     ]
   },
   "testing": {
