@@ -2,13 +2,13 @@
   "release": {
     "description": "Releases",
     "hide": false,
-    "last_updated": "2025-06-29T06:17:45.000Z",
-    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/15952283386",
+    "last_updated": "2025-06-30T06:20:34.000Z",
+    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/15965398258",
     "latest": true,
     "tags": [
       "release",
-      "release-0.22.2084",
-      "release-689593d"
+      "release-0.22.2097",
+      "release-922bdaf"
     ]
   },
   "testing": {
