@@ -14,13 +14,13 @@
   "testing": {
     "description": "Pre-releases",
     "hide": false,
-    "last_updated": "2025-08-23T20:33:17.000Z",
-    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/17179761672",
+    "last_updated": "2025-08-23T21:09:55.000Z",
+    "last_updated_url": "https://github.com/hotio/jackett/actions/runs/17180065869",
     "latest": false,
     "tags": [
       "testing",
       "testing-0.22.2325",
-      "testing-5ab1399"
+      "testing-ddfad04"
     ]
   }
 }
