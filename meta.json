@@ -1,12 +1,12 @@
 {
   "description": "Releases",
   "latest": true,
-  "packages_hash": "bd2cca5d1a1d0ffd5f555f5b29819de59a79b9f9",
+  "packages_hash": "11321fa7a49da1d1b6542d30525f03b8a2d5a065",
   "test_amd64": true,
   "test_arm64": true,
   "test_url": "http://localhost:9117",
   "upstream_image": "ghcr.io/hotio/base",
   "upstream_tag": "alpinevpn",
-  "upstream_tag_sha": "alpinevpn-e6491e4",
+  "upstream_tag_sha": "alpinevpn-7984fff",
   "version": "0.24.1841"
 }
